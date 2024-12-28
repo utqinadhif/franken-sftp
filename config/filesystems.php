@@ -56,7 +56,17 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
         ],
-
+        'mysftp' => [
+            'driver' => 'sftp',
+            'host' => env('MYSFTP_HOST'),
+            'username' => env('MYSFTP_USERNAME'),
+            'password' => env('MYSFTP_PASSWORD'),
+            'visibility' => 'public',
+            'directory_visibility' => 'public',
+            'port' => (int) env('MYSFTP_PORT', 22),
+            'root' => env('MYSFTP_ROOT', ''),
+            'url' => env('MYSFTP_URL', ''),
+        ],
     ],
 
     /*
